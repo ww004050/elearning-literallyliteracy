@@ -1,0 +1,33 @@
+ {% extends "base.html" %}
+ {% load i18n %}
+   {% block title %}My courses{% endblock %}
+   {% block content %}
+   <div class="container">
+       <h1>{% trans 'My courses' %}</h1>
+       <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Course Name</th>
+              <th scope="col">Access contents</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for course in object_list %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ course.title }}</td>
+              <td><a href="{% url 'student_course_detail' course.id %}" class="bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full" style="background-color: #94e3fd; color: black !important;">{% trans 'Access contents' %}</a></td>
+            </tr>
+          {% empty %}
+              <div class="row" style="margin-top: 15px; margin-bottom: 15px">
+                 <div class="col s6">
+                     {% trans 'You are not enrolled in any courses yet.' %}
+                 </div>
+                 <a href="{% url "course_list" %}" class="bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full">Browse courses</a>
+              </div>
+          {% endfor %}
+          </tbody>
+        </table>
+   </div>
+{% endblock %}

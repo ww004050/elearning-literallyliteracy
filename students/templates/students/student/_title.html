@@ -1,0 +1,9 @@
+{% load i18n %}
+<p>
+    {% trans 'Tags' %} : {% for tag in user.student.interests.all %} {{ tag.get_html_badge }} {% endfor %}
+</p>
+<div class="row" style="margin-top: 15px; margin-bottom: 15px"; >
+          <a href="{% url 'student_interests' %}" class="bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full  " style="background-color: #94e3fd; color: black !important;">update interests</a>
+          <a class="{% if active == 'new' %} active{% endif %} bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full " style="background-color: #94e3fd; color: black !important;" href="{% url 'student_quiz_list' %}">{% trans 'New' %}</a>
+          <a class="{% if active == 'taken' %} active{% endif %} bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full  " style="background-color: #94e3fd; color: black !important;" href="{% url 'taken_quiz_list' %}">{% trans 'Taken quiz' %}</a>
+</div>

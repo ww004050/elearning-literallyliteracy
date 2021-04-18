@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+{% trans 'Quiz' %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>{% trans 'Quiz' %}</h2>
+    <div class="quizzes">
+        {% include 'students/student/_title.html' with active='new' %}
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Quiz</th>
+              <th scope="col">Tag</th>
+              <th scope="col">Length</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for quiz in quizzes %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ quiz.name }}</td>
+              <td>{{ quiz.tag.get_html_badge }}</td>
+              <td>{{ quiz.questions_count }}</td>
+              <td><a href="{% url 'take_quiz' quiz.pk %}" class="bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full">{% trans 'Start quiz' %}</a></td>
+            </tr>
+          {% empty %}
+            <tr>
+                <td colspan="4">{% trans 'Sorry! No quiz matching your interests right now.' %}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    </div>
+</div>
+ {% endblock %}

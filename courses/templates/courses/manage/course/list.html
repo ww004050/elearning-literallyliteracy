@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}My courses{% endblock %}
+{% block content %}
+<div class="container">
+     <div class="row" style="margin-top: 15px; margin-bottom: 15px">
+         <div class="col s6">
+         <h5>My courses</h5>
+         </div>
+         <a href="{% url "course_create" %}" class="bg-teal-600 hover:bg-teal-700 text-white text-sm px-4 py-2  border rounded-full">Create new
+       course</a>
+     </div>
+     <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+          <th scope="col">Edit modules</th>
+          <th scope="col">Manage and Add content</th>
+        </tr>
+      </thead>
+      <tbody>
+       {% for course in object_list %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ course.title }}</td>
+              <td><a href="{% url 'course_edit' course.id %}"><i class="material-icons">edit</i></a></td>
+              <td><a href="{% url 'course_delete' course.id %}"><i class="material-icons">delete</i></a></td>
+              <td><a href="{% url 'course_module_update' course.id %}"><i class="material-icons">description</i></a></td>
+              <td>{% if course.modules.count > 0 %}
+                <a href="{% url 'module_content_list' course.modules.first.id %}"><i class='fas fa-edit' style='font-size:24px'></i></a>
+             {% endif %}</td>
+            </tr>
+        {% empty %}
+           <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <h1 class="display-4">You haven't created any courses yet.</h1>
+              </div>
+           </div>
+        {% endfor %}
+
+      </tbody>
+    </table>
+
+   {% endblock %}
+</div>
