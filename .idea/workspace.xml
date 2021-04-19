@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b59e42c-7d20-41b0-bbe4-b876442f7f37" name="Default Changelist" comment="Adding content">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/courses/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/courses/templates/registration/password_reset_form.html" afterDir="false" />
-    </list>
+    <list default="true" id="5b59e42c-7d20-41b0-bbe4-b876442f7f37" name="Default Changelist" comment="Adding content" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618666322214</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ammending Images">
+      <created>1618824216623</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618824216624</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +174,8 @@
     <MESSAGE value="Adding content" />
     <MESSAGE value="logo" />
     <MESSAGE value="heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="heroku" />
+    <MESSAGE value="Ammending Images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ammending Images" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
