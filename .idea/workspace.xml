@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5b59e42c-7d20-41b0-bbe4-b876442f7f37" name="Default Changelist" comment="Adding content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/courses/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/courses/templates/registration/password_reset_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
